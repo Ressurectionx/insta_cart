@@ -50,7 +50,11 @@ class ProductDetails extends StatelessWidget {
                 ),
               ],
             ),
-
+            Positioned(
+                bottom: 0,
+                child: Row(
+                  children: [addToCartButton(), buyNowButton()],
+                ))
           ],
         )),);
   }
