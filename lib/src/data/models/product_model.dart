@@ -3,12 +3,19 @@ class ProductModel {
   int? total;
   int? skip;
   int? limit;
+  String? error;
 
   ProductModel(
       {required this.products,
         required this.total,
         required this.skip,
         required this.limit});
+
+
+  ProductModel.withError(String errorMessage) {
+    error = errorMessage;
+  }
+
 
   ProductModel.fromJson(Map<String, dynamic> json) {
     if (json['products'] != null) {
