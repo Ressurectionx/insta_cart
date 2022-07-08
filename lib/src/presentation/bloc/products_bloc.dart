@@ -19,7 +19,6 @@ class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
       }on NetworkError{
         emit(const ProductsError("Failed to fetch data. is your device online?"));
       }
-
     });
   }
 }
