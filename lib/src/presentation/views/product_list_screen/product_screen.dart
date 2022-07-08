@@ -32,7 +32,7 @@ class ProductScreen extends StatelessWidget {
             const Categories(),
             divider,
             divider,
-          //  ProductList(),
+            ProductList(productModel),
             // ProductTile(),
           ],
         ),

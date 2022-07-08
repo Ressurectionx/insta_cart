@@ -24,3 +24,10 @@ List categories = [
 
 String productsEndPoint="https://dummyjson.com/products";
 
+List features = [
+  "4 GB RAM | 64 GB Storage",
+  "16.51cm(6.5 inch)HD+ Display",
+  "6000 mAh",
+  "50MP + 2MP +2MP",
+  "8MP Front Camera"
+];
