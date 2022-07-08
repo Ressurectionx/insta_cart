@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:insta_cart/src/config/size_config/size_configuration.dart';
 import 'package:insta_cart/src/data/models/product_model.dart';
+import 'package:insta_cart/src/presentation/views/product_details_screen/details.dart';
 import 'package:insta_cart/src/presentation/views/product_details_screen/product_details.dart';
 
 import '../../../../../config/utils/utils.dart';
@@ -40,7 +41,7 @@ class ProductTile extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => ProductDetails(products)));
+                    builder: (context) => Details(products)));
           },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,

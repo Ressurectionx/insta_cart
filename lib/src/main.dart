@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:insta_cart/src/config/theme/theme.dart';
-import 'package:insta_cart/src/config/utils/utils.dart';
-import 'package:insta_cart/src/presentation/bloc/products_bloc.dart';
+import 'package:insta_cart/src/presentation/bloc/details_bloc/details_bloc.dart';
+import 'package:insta_cart/src/presentation/views/product_details_screen/details.dart';
 import 'package:insta_cart/src/presentation/widget/widgets.dart';
 
+import 'presentation/bloc/product_bloc/product_bloc.dart';
 import 'presentation/views/product_list_screen/product_screen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -23,6 +24,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final ProductsBloc _productBloc = ProductsBloc();
+
 
   @override
   void initState() {

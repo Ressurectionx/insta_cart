@@ -1,5 +1,4 @@
-part of 'products_bloc.dart';
-
+part of 'product_bloc.dart';
 abstract class ProductsState extends Equatable {
   const ProductsState();
   @override
@@ -19,5 +18,3 @@ class ProductsError extends ProductsState {
   final String message;
   const ProductsError(this.message);
 }
-
-

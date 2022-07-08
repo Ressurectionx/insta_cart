@@ -1,12 +1,12 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:insta_cart/src/data/models/product_model.dart';
 import 'package:insta_cart/src/data/repository/api_repository.dart';
+import '../../../data/models/product_model.dart';
 
-part 'products_event.dart';
-part 'products_state.dart';
+
+part 'product_event.dart';
+part 'product_state.dart';
+
 
 class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
   ProductsBloc() : super(ProductsInitial()) {

@@ -8,6 +8,7 @@ import '../../widget/widgets.dart';
 import '../product_list_screen/components/components.dart';
 import 'components/components.dart';
 
+// ignore: must_be_immutable
 class ProductDetails extends StatelessWidget {
   Products products;
 
