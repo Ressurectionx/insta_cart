@@ -42,7 +42,12 @@ class ProductDetails extends StatelessWidget {
                     ),
                   ],
                 ),
-
+                paddingTop(15),
+                priceContainer(products.price),
+                aboutProduct(
+                  products.brand,
+                  products.category,
+                ),
               ],
             ),
 
