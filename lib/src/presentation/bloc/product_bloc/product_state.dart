@@ -11,7 +11,10 @@ class ProductsLoading extends ProductsState {}
 
 class ProductsLoaded extends ProductsState {
   final ProductModel productModel;
-  const ProductsLoaded(this.productModel);
+  final ProductModel laptopModel;
+  final ProductModel mobileModel;
+
+  const ProductsLoaded(this.productModel,this.laptopModel,this.mobileModel);
 }
 
 class ProductsError extends ProductsState {

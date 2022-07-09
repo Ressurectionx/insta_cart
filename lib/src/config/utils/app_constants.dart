@@ -2,7 +2,7 @@ List categories = [
   "all",
   "mobile",
   "laptops",
-  "fragrances",
+/*  "fragrances",
   "skincare",
   "groceries",
   "home-decoration",
@@ -19,10 +19,13 @@ List categories = [
   "sunglasses",
   "automotive",
   "motorcycle",
-  "lighting"
+  "lighting"*/
 ];
 
 String productsEndPoint="https://dummyjson.com/products";
+String mobileEndPoint="https://dummyjson.com/products/category/smartphones";
+String laptopEndPoint="https://dummyjson.com/products/search?q=Laptop";
+
 
 List features = [
   "4 GB RAM | 64 GB Storage",

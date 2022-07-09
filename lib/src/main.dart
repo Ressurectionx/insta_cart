@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:insta_cart/src/config/theme/theme.dart';
-import 'package:insta_cart/src/presentation/bloc/details_bloc/details_bloc.dart';
-import 'package:insta_cart/src/presentation/views/product_details_screen/details.dart';
 import 'package:insta_cart/src/presentation/widget/widgets.dart';
 
 import 'presentation/bloc/product_bloc/product_bloc.dart';
@@ -12,7 +10,7 @@ import 'presentation/views/product_list_screen/product_screen.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
   const SystemUiOverlayStyle(statusBarColor: Colors.blue));
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -55,7 +53,7 @@ class _MyAppState extends State<MyApp> {
               else if (state is ProductsLoading) {
                 return productLoading();
               }else if (state is ProductsLoaded) {
-                return ProductScreen(context,state.productModel);
+                return ProductScreen(context,state.productModel,state.laptopModel,state.mobileModel);
               }else if (state is ProductsError) {
                 return Container();
               } else {

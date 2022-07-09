@@ -8,6 +8,12 @@ class ApiRepository {
   Future<ProductModel> fetchProductList() {
     return _provider.fetchProductList();
   }
+  Future<ProductModel> fetchMobileList() {
+    return _provider.fetchMobileList();
+  }
+  Future<ProductModel> fetchLaptopList() {
+    return _provider.fetchLaptopList();
+  }
 }
 
 class NetworkError extends Error {}

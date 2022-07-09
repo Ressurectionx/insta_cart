@@ -1,8 +1,6 @@
-import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:insta_cart/src/data/models/product_model.dart';
 
 import '../../../data/repository/api_repository.dart';
 

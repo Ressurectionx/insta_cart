@@ -1,28 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:insta_cart/src/config/size_config/size_configuration.dart';
-
 import '../../../../config/utils/utils.dart';
+import '../../../../data/models/product_model.dart';
 import '../../../widget/widgets.dart';
+import 'components.dart';
 
 
 class Categories extends StatefulWidget {
-  const Categories({Key? key}) : super(key: key);
+  ProductModel productModel;
+  ProductModel laptopModel;
+  ProductModel mobileModel;
+  Categories(this.productModel,this.laptopModel,this.mobileModel);
 
   @override
   State<Categories> createState() => _CategoriesState();
 }
 
 class _CategoriesState extends State<Categories> {
+
   int selectedIndex = 0;
+  List? pages;
+  PageController pageController=PageController(initialPage: 2);
 
   @override
+  void initState(){
+    pages;
+  }
+  @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        height: getProportionateScreenHeight(50),
-        child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: category.length,
-            itemBuilder: (context, index) => InkWell(
+    print(selectedIndex);
+    List pages=[
+      ProductList(widget.productModel),
+      ProductList(widget.laptopModel),
+      ProductList(widget.mobileModel),
+    ];
+    return Column(
+      children: [
+        SizedBox(
+            height: getProportionateScreenHeight(50),
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: category.length,
+                itemBuilder: (context, index) => InkWell(
                   onTap: () {
                     setState(() {
                       selectedIndex = category[index].index;
@@ -30,7 +49,7 @@ class _CategoriesState extends State<Categories> {
                   },
                   child: Container(
                     margin:
-                        const EdgeInsets.only(left: 16, top: 10, bottom: 10),
+                    const EdgeInsets.only(left: 16, top: 10, bottom: 10),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18),
                         color: selectedIndex == category[index].index
@@ -54,6 +73,21 @@ class _CategoriesState extends State<Categories> {
                       ],
                     ),
                   ),
-                )));
+                ))),
+        divider,
+        divider,
+        SizedBox(
+          height: height*0.8,
+          child: PageView.builder(
+              controller: pageController,
+              itemBuilder: (context,index){
+                return pages[selectedIndex];
+              }
+
+          ),
+        ),
+
+      ],
+    );
   }
 }

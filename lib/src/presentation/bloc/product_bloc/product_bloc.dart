@@ -15,7 +15,10 @@ class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
       try{
         emit(ProductsLoading());
         final productList=await _repository.fetchProductList();
-        emit(ProductsLoaded(productList));
+        final laptopList=await _repository.fetchLaptopList();
+        final mobileList=await _repository.fetchMobileList();
+
+        emit(ProductsLoaded(productList,laptopList,mobileList));
       }on NetworkError{
         emit(const ProductsError("Failed to fetch data. is your device online?"));
       }

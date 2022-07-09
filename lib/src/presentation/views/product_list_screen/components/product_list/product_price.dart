@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../config/utils/font_styles.dart';
 import '../../../../widget/widgets.dart';
 
+// ignore: must_be_immutable
 class ProductPrice extends StatelessWidget {
   int price, discount;
 
