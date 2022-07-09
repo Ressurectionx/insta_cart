@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:insta_cart/src/config/size_config/size_configuration.dart';
 import 'package:insta_cart/src/data/models/product_model.dart';
 import 'package:insta_cart/src/presentation/views/product_details_screen/details.dart';
-import 'package:insta_cart/src/presentation/views/product_details_screen/product_details.dart';
 
 import '../../../../../config/utils/utils.dart';
 import '../../../../widget/widgets.dart';
@@ -26,6 +25,7 @@ class ProductList extends StatelessWidget {
 }
 
 
+// ignore: must_be_immutable
 class ProductTile extends StatelessWidget {
   Products products;
 

@@ -10,7 +10,7 @@ class ApiProvider {
     try {
       Response response = await _dio.get(productsEndPoint);
       return ProductModel.fromJson(response.data);
-    } catch (error, stacktrace) {
+    } catch (error) {
     //  print("Exception occured: $error stackTrace: $stacktrace");
       return ProductModel.withError("Data not found / Connection issue");
     }

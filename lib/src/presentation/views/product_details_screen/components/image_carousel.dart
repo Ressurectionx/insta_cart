@@ -1,12 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:insta_cart/src/config/size_config/size_configuration.dart';
-import 'package:insta_cart/src/data/models/product_model.dart';
 
-import '../../../../config/utils/utils.dart';
-import '../../../widget/widgets.dart';
-import '../../product_list_screen/components/product_list/rating_bar.dart';
 
+// ignore: must_be_immutable
 class ImageCarousel extends StatelessWidget {
   List<String> images;
    ImageCarousel(this.images, {Key? key}) : super(key: key);

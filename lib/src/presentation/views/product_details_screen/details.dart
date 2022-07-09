@@ -6,6 +6,7 @@ import 'package:insta_cart/src/presentation/views/product_details_screen/product
 
 import '../../widget/widgets.dart';
 
+// ignore: must_be_immutable
 class Details extends StatelessWidget {
   Products products;
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:insta_cart/src/config/size_config/size_configuration.dart';
-import 'package:insta_cart/src/config/utils/font_styles.dart';
 import 'package:insta_cart/src/config/utils/utils.dart';
 import 'package:insta_cart/src/data/models/product_model.dart';
 

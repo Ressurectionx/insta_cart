@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:insta_cart/src/config/size_config/size_configuration.dart';
-
 import '../../../../config/utils/utils.dart';
 import '../../../widget/widgets.dart';
 
