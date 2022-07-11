@@ -21,12 +21,8 @@ class ProductScreen extends StatefulWidget {
 
 
 class _ProductScreenState extends State<ProductScreen> {
-  List? pages;
   PageController pageController=PageController(initialPage: 2);
 
-  void initState(){
-    pages;
-  }
   @override
   Widget build(BuildContext context) {
 

@@ -17,18 +17,12 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-
   int selectedIndex = 0;
-  List? pages;
+
   PageController pageController=PageController(initialPage: 2);
 
   @override
-  void initState(){
-    pages;
-  }
-  @override
   Widget build(BuildContext context) {
-    print(selectedIndex);
     List pages=[
       ProductList(widget.productModel),
       ProductList(widget.laptopModel),
